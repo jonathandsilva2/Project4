@@ -225,6 +225,10 @@ th {
 /*--------------------------------------------------------------
 # Embedded Fonts
 --------------------------------------------------------------*/
+body {
+  font-size: 16px;
+  color: #404040; }
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -606,6 +610,28 @@ a {
 .bypostauthor {
   display: block; }
 
+.type-post {
+  max-width: 70%; }
+
+.entry-header {
+  position: relative; }
+
+.blog .entry-title a {
+  position: absolute;
+  top: 50px;
+  background-color: #248A83;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem; }
+
+.entry-meta {
+  bottom: 7px;
+  right: 0px;
+  position: absolute;
+  background-color: #248A83;
+  color: white;
+  padding: 2px 5px; }
+
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
@@ -670,3 +696,36 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+/*--------------------------------------------------------------
+# Embedded Fonts
+--------------------------------------------------------------*/
+body {
+  font-size: 16px;
+  color: #404040; }
+
+.site-info {
+  background-image: url("/dark-wood.png");
+  background-color: black;
+  color: white;
+  display: grid;
+  grid-template-rows: 15% 50% 35%;
+  grid-template-columns: 10% 20% 5% 20% 25% 20% 5%; }
+
+.contact-info {
+  grid-row: 2/3;
+  grid-column: 2/3; }
+
+.business-hours {
+  grid-row: 2/3;
+  grid-column: 4/5; }
+
+.logo-footer {
+  grid-row: 2/3;
+  grid-column: 6/7; }
+
+.copyright {
+  grid-row: 3/4;
+  grid-column: 1/8;
+  justify-self: center;
+  -ms-flex-item-align: end;
+      align-self: end; }

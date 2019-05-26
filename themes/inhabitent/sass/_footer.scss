@@ -1,0 +1,42 @@
+/*--------------------------------------------------------------
+# Embedded Fonts
+--------------------------------------------------------------*/
+body {
+    font-size: 16px;
+    color: #404040;
+    
+}
+
+    .site-info {
+        background-image: url("/dark-wood.png");
+        // background-size: cover;
+    //    background-color: black; 
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-rows: 15% 50% 35%;
+    grid-template-columns: 10% 20% 5% 20% 25% 20% 5%;
+       
+    }
+
+    .contact-info {
+        grid-row: 2/3;
+        grid-column: 2/3;
+    }
+
+    .business-hours {
+        grid-row: 2/3;
+        grid-column: 4/5;
+    }
+
+    .logo-footer {
+        grid-row: 2/3;
+        grid-column: 6/7;
+    }
+
+    .copyright {
+        grid-row: 3/4;
+        grid-column: 1/8;
+        justify-self: center;
+        align-self: end;
+    }

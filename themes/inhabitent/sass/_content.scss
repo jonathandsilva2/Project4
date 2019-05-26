@@ -47,3 +47,34 @@
 .bypostauthor {
 	display: block;
 }
+
+.type-post {
+	max-width: 70%;
+}
+
+.entry-header {
+	position: relative;
+	
+}
+
+
+.blog .entry-title a {
+	position: absolute;
+	top: 50px;
+	background-color: #248A83;
+	text-decoration: none;
+	color: white;
+	font-size: 1.5rem;
+}
+
+
+
+.entry-meta {
+	bottom: 7px;
+	right: 0px;
+	position: absolute;
+	background-color: #248A83;
+	color: white;
+	padding: 2px 5px;
+}
+
