@@ -3,6 +3,9 @@
 --------------------------------------------------------------*/
 
 /* Links */
+header {
+	border-bottom: 1px;
+
 
 a {
 	color: $color__link;
@@ -28,15 +31,48 @@ a {
 
 .main-navigation {
 	clear: both;
-	display: block;
-	float: left;
 	width: 100%;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	border-bottom: $border__solid;
+
+	.header-logo {
+			align-self: center;
+			justify-self: center;
+			
+
+			
+		img {
+			height: 35px;
+			
+		}
+	}
+	
+	.menu-menu-1-container {
+			display: grid;
+		   grid-template-columns: 20% 33% 47%;
+		   width: 100%;
+		   grid-column: 2/3;
+		   
+		.header-logo {
+			
+			img {
+				size: 30%;
+			}
+		}
 
 	ul {
-		display: none;
+		grid-column: 2/4;
+	    // justify-self: center;
 		list-style: none;
 		margin: 0;
-		padding-left: 0;
+		padding: 17px 0px;
+		align-self: center;
+		 li {
+			 padding-right: 25px;
+			 font-family: "Novecento-normal";
+
+		 }
 
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -52,10 +88,12 @@ a {
 			}
 
 			li {
+				padding-right: 40px;
 				&:hover > ul,
 				&.focus > ul {
 					left: 100%;
 				}
+				
 			}
 
 			a {
@@ -129,4 +167,6 @@ a {
 		text-align: right;
 		width: 50%;
 	}
+}
+}
 }

@@ -225,9 +225,47 @@ th {
 /*--------------------------------------------------------------
 # Embedded Fonts
 --------------------------------------------------------------*/
-body {
-  font-size: 16px;
-  color: #404040; }
+@font-face {
+  font-family: 'Merriweather-normal';
+  src: url("../../fonts/Merriweather/fonts/merriweather-light-webfont.eot");
+  src: url("../../fonts/Merriweather/fonts/merriweather-light-webfont.woff2") format("woff2"), url("../../fonts/Merriweather/fonts/merriweather-light-webfont.woff") format("woff"), url("../../fonts/Merriweather/fonts/merriweather-light-webfont.ttf") format("truetype"), url("../../fonts/Merriweather/fonts/merriweather-light-webfont.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Merriweather-italic';
+  src: url("../../fonts/Merriweather/fonts/merriweather-lightitalic-webfont.eot");
+  src: url("../../fonts/Merriweather/fonts/merriweather-lightitalic-webfont.woff2") format("woff2"), url("../../fonts/Merriweather/fonts/merriweather-lightitalic-webfont.woff") format("woff"), url("../../fonts/Merriweather/fonts/merriweather-lightitalic-webfont.ttf") format("truetype"), url("../../fonts/Merriweather/fonts/merriweather-lightitalic-webfont.svg") format("svg");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Merriweather-bold';
+  src: url("../../fonts/Merriweather/fonts/merriweather-bold-webfont.eot");
+  src: url("../../fonts/Merriweather/fonts/merriweather-bold-webfont.woff2") format("woff2"), url("../../fonts/Merriweather/fonts/merriweather-bold-webfont.woff") format("woff"), url("../../fonts/Merriweather/fonts/merriweather-bold-webfont.ttf") format("truetype"), url("../../fonts/Merriweather/fonts/merriweather-bold-webfont.svg") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Merriweather-bold-italic';
+  src: url("../../fonts/Merriweather/fonts/merriweather-bolditalic-webfont.eot");
+  src: url("../../fonts/Merriweather/fonts/merriweather-bolditalic-webfont.woff2") format("woff2"), url("../../fonts/Merriweather/fonts/merriweather-bolditalic-webfont.woff") format("woff"), url("../../fonts/Merriweather/fonts/merriweather-bolditalic-webfont.ttf") format("truetype"), url("../../fonts/Merriweather/fonts/merriweather-bolditalic-webfont.svg") format("svg");
+  font-weight: bold;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Novecento-normal';
+  src: url("../../fonts/Novecento/fonts/novecentosanswide-normal-webfont.eot");
+  src: url("../../fonts/Novecento/fonts/novecentosanswide-normal-webfont.woff2") format("woff2"), url("../../fonts/Novecento/fonts/novecentosanswide-normal-webfont.woff") format("woff"), url("../../fonts/Novecento/fonts/novecentosanswide-normal-webfont.ttf") format("truetype"), url("../../fonts/Novecento/fonts/novecentosanswide-normal-webfont.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Novecento-bold';
+  src: url("../../fonts/Novecento/fonts/novecentosanswide-demibold-webfont.eot");
+  src: url("../../fonts/Novecento/fonts/novecentosanswide-demibold-webfont.woff2") format("woff2"), url("../../fonts/Novecento/fonts/novecentosanswide-demibold-webfont.woff") format("woff"), url("../../fonts/Novecento/fonts/novecentosanswide-demibold-webfont.ttf") format("truetype"), url("../../fonts/Novecento/fonts/novecentosanswide-demibold-webfont.svg") format("svg");
+  font-weight: bold;
+  font-style: normal; }
 
 /*--------------------------------------------------------------
 # Typography
@@ -238,7 +276,7 @@ input,
 select,
 textarea {
   color: #404040;
-  font-family: sans-serif;
+  font-family: "Merriweather-Light";
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5; }
@@ -423,83 +461,100 @@ textarea {
 # Navigation
 --------------------------------------------------------------*/
 /* Links */
-a {
-  color: royalblue; }
-  a:visited {
-    color: purple; }
-  a:hover, a:focus, a:active {
-    color: midnightblue; }
-  a:focus {
-    outline: thin dotted; }
-  a:hover, a:active {
-    outline: 0; }
-
-/* Menus */
-.main-navigation {
-  clear: both;
-  display: block;
-  float: left;
-  width: 100%; }
-  .main-navigation ul {
-    display: none;
-    list-style: none;
-    margin: 0;
-    padding-left: 0; }
-    .main-navigation ul ul {
-      -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-              box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+header {
+  border-bottom: 1px;
+  /* Menus */ }
+  header a {
+    color: royalblue; }
+    header a:visited {
+      color: #248A83; }
+    header a:hover, header a:focus, header a:active {
+      color: black; }
+    header a:focus {
+      outline: thin dotted; }
+    header a:hover, header a:active {
+      outline: 0; }
+  header .main-navigation {
+    clear: both;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border-bottom: 1px solid #e1e1e1;
+    /* Small menu. */ }
+    header .main-navigation .header-logo {
+      -ms-flex-item-align: center;
+          align-self: center;
+      justify-self: center; }
+      header .main-navigation .header-logo img {
+        height: 35px; }
+    header .main-navigation .menu-menu-1-container {
+      display: grid;
+      grid-template-columns: 20% 33% 47%;
+      width: 100%;
+      grid-column: 2/3; }
+      header .main-navigation .menu-menu-1-container .header-logo img {
+        size: 30%; }
+      header .main-navigation .menu-menu-1-container ul {
+        grid-column: 2/4;
+        list-style: none;
+        margin: 0;
+        padding: 17px 0px;
+        -ms-flex-item-align: center;
+            align-self: center; }
+        header .main-navigation .menu-menu-1-container ul li {
+          padding-right: 25px;
+          font-family: "Novecento-normal"; }
+        header .main-navigation .menu-menu-1-container ul ul {
+          -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+                  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+          float: left;
+          position: absolute;
+          top: 1.5rem;
+          left: -999rem;
+          z-index: 99999; }
+          header .main-navigation .menu-menu-1-container ul ul ul {
+            left: -999rem;
+            top: 0; }
+          header .main-navigation .menu-menu-1-container ul ul li {
+            padding-right: 40px; }
+            header .main-navigation .menu-menu-1-container ul ul li:hover > ul,
+            header .main-navigation .menu-menu-1-container ul ul li.focus > ul {
+              left: 100%; }
+          header .main-navigation .menu-menu-1-container ul ul a {
+            width: 200px; }
+        header .main-navigation .menu-menu-1-container ul li:hover > ul,
+        header .main-navigation .menu-menu-1-container ul li.focus > ul {
+          left: auto; }
+      header .main-navigation .menu-menu-1-container li {
+        float: left;
+        position: relative; }
+      header .main-navigation .menu-menu-1-container a {
+        display: block;
+        text-decoration: none; }
+    header .main-navigation .menu-toggle,
+    header .main-navigation .main-navigation.toggled ul {
+      display: block; }
+    @media screen and (min-width: 768px) {
+      header .main-navigation .menu-toggle {
+        display: none; }
+      header .main-navigation .main-navigation ul {
+        display: block; } }
+    .site-main header .main-navigation .comment-navigation, .site-main
+    header .main-navigation .posts-navigation, .site-main
+    header .main-navigation .post-navigation {
+      margin: 0 0 1.5rem;
+      overflow: hidden; }
+    header .main-navigation .comment-navigation .nav-previous,
+    header .main-navigation .posts-navigation .nav-previous,
+    header .main-navigation .post-navigation .nav-previous {
       float: left;
-      position: absolute;
-      top: 1.5rem;
-      left: -999rem;
-      z-index: 99999; }
-      .main-navigation ul ul ul {
-        left: -999rem;
-        top: 0; }
-      .main-navigation ul ul li:hover > ul,
-      .main-navigation ul ul li.focus > ul {
-        left: 100%; }
-      .main-navigation ul ul a {
-        width: 200px; }
-    .main-navigation ul li:hover > ul,
-    .main-navigation ul li.focus > ul {
-      left: auto; }
-  .main-navigation li {
-    float: left;
-    position: relative; }
-  .main-navigation a {
-    display: block;
-    text-decoration: none; }
-
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-  display: block; }
-
-@media screen and (min-width: 768px) {
-  .menu-toggle {
-    display: none; }
-  .main-navigation ul {
-    display: block; } }
-
-.site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
-.post-navigation {
-  margin: 0 0 1.5rem;
-  overflow: hidden; }
-
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-  float: left;
-  width: 50%; }
-
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-  float: right;
-  text-align: right;
-  width: 50%; }
+      width: 50%; }
+    header .main-navigation .comment-navigation .nav-next,
+    header .main-navigation .posts-navigation .nav-next,
+    header .main-navigation .post-navigation .nav-next {
+      float: right;
+      text-align: right;
+      width: 50%; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -704,28 +759,103 @@ body {
   color: #404040; }
 
 .site-info {
-  background-image: url("/dark-wood.png");
+  background-image: url("../../images/dark-wood.png");
   background-color: black;
   color: white;
   display: grid;
   grid-template-rows: 15% 50% 35%;
-  grid-template-columns: 10% 20% 5% 20% 25% 20% 5%; }
+  grid-template-columns: 10% 15% 5% 20% 25% 15% 10%;
+  font-family: 'Merriweather-normal';
+  height: 350px; }
 
 .contact-info {
   grid-row: 2/3;
-  grid-column: 2/3; }
+  grid-column: 2/3;
+  line-height: 40px; }
+
+.contact-info > h6 {
+  font-family: 'Novecento-bold';
+  font-weight: bold;
+  font-size: 1.1em;
+  letter-spacing: 2px;
+  color: #d99054; }
 
 .business-hours {
   grid-row: 2/3;
-  grid-column: 4/5; }
+  grid-column: 4/5;
+  line-height: 40px; }
+
+.business-hours > h6 {
+  font-family: 'Novecento-bold';
+  font-weight: bold;
+  font-size: 1.1em;
+  letter-spacing: 2px;
+  color: #d99054; }
 
 .logo-footer {
   grid-row: 2/3;
-  grid-column: 6/7; }
+  grid-column: 5/7;
+  justify-self: right;
+  max-width: 60%; }
 
 .copyright {
+  font-family: 'Novecento-normal';
   grid-row: 3/4;
   grid-column: 1/8;
   justify-self: center;
-  -ms-flex-item-align: end;
-      align-self: end; }
+  -ms-flex-item-align: center;
+      align-self: center; }
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*--------------------------------------------------------------
+# Embedded Fonts
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Embedded Fonts
+--------------------------------------------------------------*/

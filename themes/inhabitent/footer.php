@@ -17,6 +17,7 @@
 				<p>778-456-7891</p>
 				</div>
 				<div class="business-hours">
+				<h6>BUSINESS HOURS</h6>
 				<p><b>Monday-Friday: </b>9am to 5pm</p>
 				<p><b>Saturday: </b>10am to 2pm</p>
 				<p><b>Sunday: </b>Closed</p>
