@@ -41,6 +41,10 @@
 
 /* Comments */
 
+.primary {
+	max-width: 70%;
+	float: left;
+}
 .comment-content a {
 	word-wrap: break-word;
 }
@@ -48,9 +52,9 @@
 	display: block;
 }
 
-.type-post {
-	max-width: 70%;
-}
+// .type-post {
+// 	max-width: 70%;
+// }
 
 .entry-header {
 	position: relative;
@@ -64,17 +68,48 @@
 	background-color: #248A83;
 	text-decoration: none;
 	color: white;
-	font-size: 1.5rem;
+	font-size: 2.1rem;
+	font-weight: bold;
+	padding: .75rem 1.5rem;
+	max-width: 70%;
+	font-family: 'Novecento-bold';	
+	letter-spacing: 2px;
 }
 
 
 
 .entry-meta {
-	bottom: 7px;
+	bottom: 3px;
 	right: 0px;
 	position: absolute;
 	background-color: #248A83;
 	color: white;
-	padding: 2px 5px;
+	font-family: 'Novecento-normal';
+	padding: .6rem 1.2rem;
 }
 
+.journal {
+	display: grid;
+	grid-template-columns: 65% 25%;
+	padding-top: 50px;
+}
+
+.journal-left {
+	grid-column: 1/2;
+	width: 90%;
+	justify-self: right;
+	padding-right: 60px;
+}
+
+.sidebar-right { 
+	grid-column: 2/3;
+	border-left: $border__solid;
+	padding-left: 50px;
+	line-height: 50px;
+	font-family: 'Merriweather-normal'
+}
+
+.entry-content {
+	font-family: 'Merriweather-normal';
+	line-height: 1.75rem;
+}

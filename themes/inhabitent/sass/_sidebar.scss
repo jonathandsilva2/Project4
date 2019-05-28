@@ -1,22 +1,24 @@
 /*--------------------------------------------------------------
 # Embedded Fonts
---------------------------------------------------------------*/
-// nav {
+// --------------------------------------------------------------*/
+.widget-area > .widget > h2 {
+    font-weight: bold;
+    font-family: "Novecento-bold";
+    letter-spacing: 2px;
+    
+}
 
+.widget-area {
+ 
 
-// .menu-menu-1-container {
-//   display: grid;
-//     align-self: right;
-//     grid-template-columns: 20% 33% 25% 22%;
-   
-//     ul {
-//         grid-column: 3/4;
-//         justify-self: right;
-//         li {
-//             margin-right: 1.5rem;
-//             text-decoration: none;
-//         }
-//     }
-// }
+    
+    .widget {
+        h2 {
+            font-size: 1.5rem;
+        }
+    }
+}
 
-// }
+.textwidget > aside > span > strong {
+    font-weight: bold;
+}
