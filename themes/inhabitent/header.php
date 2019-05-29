@@ -34,4 +34,4 @@
 				</nav><!-- #site-navigation -->
 			</header><!-- #masthead -->
 
-			<div id="content" class="site-content journal">
+			<div id="content" class="site-content">

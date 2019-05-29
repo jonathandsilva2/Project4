@@ -1,0 +1,40 @@
+/*--------------------------------------------------------------
+# Embedded Fonts
+// --------------------------------------------------------------*/
+.products-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1.5rem;
+
+}
+
+.product-square {
+    grid-column: 1fr;
+    border: $border__solid;
+    height: 280px;
+
+}
+
+
+.product-image {
+
+
+
+}
+
+.product-image > a > img {
+    
+    height: 220px;
+    object-fit: cover;
+
+}
+
+.product-meta {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Merriweather-normal';
+    align-items: center;
+    margin-top: 2px;
+    
+}
+

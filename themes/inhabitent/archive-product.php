@@ -8,13 +8,24 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="main shop" class="site-main shop" role="main">
+		<div class="products-container">
+			<?php while ( have_posts() ) : the_post('showposts=16'); ?>
 
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php get_template_part( 'template-parts/content', 'page' ); ?>
+		
 				<?php if ( has_post_thumbnail() ) : ?>
-			<?php the_post_thumbnail( 'medium' ); ?>
+				
+				<div class="product-square">
+					<div class="product-image">
+				<a href="<?php the_permalink(); ?>"><img src="<?php the_post_thumbnail_url(); ?>"></a>
+				</div>
+			<div class="product-meta">
+			<p><?php echo CFS()->get( 'price' ); ?></p>
+		<p><?php echo the_title(); ?></p>
+</div>
+</div>
+
+		
 
 			<?php endif; endwhile;
 			// End of the loop. ?>
@@ -22,5 +33,5 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>

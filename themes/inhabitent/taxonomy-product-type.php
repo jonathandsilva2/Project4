@@ -13,6 +13,12 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
+			<!--this code is for grabbing the product title and image -->
+			<?php foreach($products_posts as $post):?>
+	  <h2><?php echo $post->post_title ;?></h2>
+	 <?php echo get_the_post_thumbnail();?>
+	  <?php endforeach ;?> 
+
 
 				<?php get_template_part( 'template-parts/content', 'page' ); ?>
 

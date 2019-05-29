@@ -1,0 +1,39 @@
+/*--------------------------------------------------------------
+# Embedded Fonts
+--------------------------------------------------------------*/
+.about {
+    
+}
+
+.about-hero {
+    background: linear-gradient( to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100% ), url('../../images/about-hero.jpg') no-repeat center bottom;
+    background-size: cover, cover;
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+}
+
+.about-hero > h1 {
+    align-self: center;
+    font-family: "Novecento-bold";
+    letter-spacing: 2px;
+    font-size: 3rem;
+    color: white;
+}
+
+.about-text {
+    padding: 50px 150px;
+    line-height: 1.75;
+    font-family: 'Merriweather-normal';
+}
+
+.about-page > main > article > h2{
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Novecento-bold";
+    text-align: center;
+    font-size: 2.1rem;
+    color: black;
+    letter-spacing: 2px;
+    padding-bottom: 30px;
+}

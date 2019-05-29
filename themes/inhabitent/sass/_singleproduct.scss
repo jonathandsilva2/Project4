@@ -1,0 +1,48 @@
+/*--------------------------------------------------------------
+# Embedded Fonts
+--------------------------------------------------------------*/
+.entry-content {
+    margin-top: 40px
+}
+
+.single-product {
+    display: flex;
+justify-content: space-between;
+margin-bottom: 130px;
+}
+
+
+.single-product-image {
+   width: 48%;
+}
+
+.single-product-meta {
+    display: flex;
+    width: 48%;
+    flex-direction: column;
+    justify-content: space-between;
+   
+   h3 {
+       font-size: 2.4rem;
+       font-family: "Novecento-bold";
+       color: $color__orange;
+   }
+   .single-product-price {
+    font-family: "Novecento-normal";
+    font-size: 1.8rem;
+    padding-top: 5px;
+  }
+  .single-product-content {
+    background-color: 'Merriweather-normal';
+  }
+.single-social-buttons > button{
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 0;
+    font-family: 'Novecento-normal';
+    font-size: 0.9rem;
+    padding: .75rem 1.5rem;
+    text-transform: uppercase;
+    margin-right: 4px;
+}
+}
