@@ -32,18 +32,26 @@ a {
 .main-navigation {
 	clear: both;
 	width: 100%;
-	display: grid;
+	display: flex;
 	// grid-template-columns: 50% 50%;
-	grid-template-columns: 10% 1fr 25%;
+	justify-content: space-between;
 	border-bottom: $border__solid;
+	fieldset {
+		
+		display: inline-block;
+	}
+	.search-field {
+		display: none;
+		border: none;
+	}
 	form {
 	
 		align-self: center;
+		
 	}
 	.header-logo {
-			align-self: center;
-			justify-self: center;
-			
+		display: flex;
+		align-self: center;
 
 			
 		img {
@@ -51,12 +59,15 @@ a {
 			
 		}
 	}
+.menu {
+	display: flex;
 	
+}
 	.menu-menu-1-container {
-			display: grid;
-		   grid-template-columns: 20% 33% 47%;
-		   width: 100%;
-		   grid-column: 2/3;
+		
+display: flex;
+		   
+		
 		   
 		.header-logo {
 			

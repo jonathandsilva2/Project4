@@ -520,24 +520,38 @@ header {
   header .main-navigation {
     clear: both;
     width: 100%;
-    display: grid;
-    grid-template-columns: 10% 1fr 25%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     border-bottom: 1px solid #e1e1e1;
     /* Small menu. */ }
+    header .main-navigation fieldset {
+      display: inline-block; }
+    header .main-navigation .search-field {
+      display: none;
+      border: none; }
     header .main-navigation form {
       -ms-flex-item-align: center;
           align-self: center; }
     header .main-navigation .header-logo {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
       -ms-flex-item-align: center;
-          align-self: center;
-      justify-self: center; }
+          align-self: center; }
       header .main-navigation .header-logo img {
         height: 35px; }
+    header .main-navigation .menu {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
     header .main-navigation .menu-menu-1-container {
-      display: grid;
-      grid-template-columns: 20% 33% 47%;
-      width: 100%;
-      grid-column: 2/3; }
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
       header .main-navigation .menu-menu-1-container .header-logo img {
         size: 30%; }
       header .main-navigation .menu-menu-1-container ul {
