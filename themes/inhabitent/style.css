@@ -770,7 +770,7 @@ header {
 .journal {
   display: grid;
   grid-template-columns: 70% 30%;
-  padding-top: 50px; }
+  margin-top: 50px; }
 
 .journal-left {
   grid-column: 1/2;
@@ -924,6 +924,10 @@ body {
 
 .textwidget > aside > span > strong {
   font-weight: bold; }
+
+h1 {
+  font-family: 'Novecento-bold';
+  font-size: 2.1rem; }
 
 /*--------------------------------------------------------------
 # Embedded Fonts
