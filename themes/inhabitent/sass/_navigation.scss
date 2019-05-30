@@ -33,9 +33,13 @@ a {
 	clear: both;
 	width: 100%;
 	display: grid;
-	grid-template-columns: 50% 50%;
+	// grid-template-columns: 50% 50%;
+	grid-template-columns: 10% 1fr 25%;
 	border-bottom: $border__solid;
-
+	form {
+	
+		align-self: center;
+	}
 	.header-logo {
 			align-self: center;
 			justify-self: center;

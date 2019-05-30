@@ -21,12 +21,12 @@
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 
+</header>
 	<div class="entry-content">
 		<?php the_content(); ?>
 	
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php red_starter_entry_footer(); ?>
+	
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
