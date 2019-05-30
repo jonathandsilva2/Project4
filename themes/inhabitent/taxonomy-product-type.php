@@ -6,26 +6,45 @@
  */
 
 get_header(); ?>
-<h2>
-	LMAO
-</h2>
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
 
-			<?php while ( have_posts() ) : the_post(); ?>
-			<!--this code is for grabbing the product title and image -->
-			<?php foreach($products_posts as $post):?>
-	  <h2><?php echo $post->post_title ;?></h2>
-	 <?php echo get_the_post_thumbnail();?>
-	  <?php endforeach ;?> 
+<div id="primary" class="content-area">
+	<?php $bob = ['taxonomy' => 'product-type', 'hide_empty' => 0,];
+	  $products_types = get_terms($bob);?>
+<div class="shop-header">
+	<h1>SHOP STUFF</h1>
+<div class="product-header">
+	  <?php foreach($products_types as $types):?>
+	  <a href="<?php  echo get_term_link($types);?>"><?php  echo $types->name;?></a>
+	  <?php endforeach ;?>
+</div>	
+</div>
+		
 
 
-				<?php get_template_part( 'template-parts/content', 'page' ); ?>
+<main id="main shop" class="site-main shop" role="main">
+		<div class="products-container">
+			<?php while ( have_posts() ) : the_post('showposts=16'); ?>
 
-			<?php endwhile; // End of the loop. ?>
+		
+				<?php if ( has_post_thumbnail() ) : ?>
+				
+				<div class="product-square">
+					<div class="product-image">
+				<a href="<?php the_permalink(); ?>"><img src="<?php the_post_thumbnail_url(); ?>"></a>
+				</div>
+			<div class="product-meta">
+			<p><?php echo CFS()->get( 'price' ); ?></p>
+		<p><?php echo the_title(); ?></p>
+</div>
+</div>
+
+		
+
+			<?php endif; endwhile;
+			// End of the loop. ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>

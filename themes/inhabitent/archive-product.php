@@ -7,12 +7,25 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main shop" class="site-main shop" role="main">
+	
+<div id="primary" class="content-area">
+	<?php $bob = ['taxonomy' => 'product-type', 'hide_empty' => 0,];
+	  $products_types = get_terms($bob);?>
+<div class="shop-header">
+	<h1>SHOP STUFF</h1>
+<div class="product-header">
+	  <?php foreach($products_types as $types):?>
+	  <a href="<?php  echo get_term_link($types);?>"><?php  echo $types->name;?></a>
+	  <?php endforeach ;?>
+</div>	
+</div>
+
+
+	
+	<main id="main shop" class="site-main shop" role="main">
 		<div class="products-container">
 			<?php while ( have_posts() ) : the_post('showposts=16'); ?>
 
-		
 				<?php if ( has_post_thumbnail() ) : ?>
 				
 				<div class="product-square">

@@ -9,4 +9,138 @@
     justify-content: center;
 }
 
-// linear-gradient(180deg,rgba(0,0,0,.4) 0,rgba(0,0,0,.4)),#969696 url(../../images/home-hero.jpg) no-repeat top;
+// Taxonomy Blocks
+
+.product-blocks {
+    margin: 65px 0 65px 0;
+}
+
+.product-block-title {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 400;
+    font-family: 'Novecento-normal';
+    margin-bottom: 2rem;
+}
+
+.product-block {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 25px;
+    
+    
+
+    .product-block-item:hover{
+        border: 1px solid $color__orange;
+        border-top-width: 5px;
+    }
+    
+
+    .product-block-item {
+        border: 1px solid #e1e1e1;
+        border-top-width: 5px;
+        grid-column: 1fr;
+        padding: 1.3rem 1.5rem;
+        
+
+        img {
+         height: 70px;
+         width: 70px;       
+        
+        }
+
+        p {
+        margin-bottom: 1.5rem;
+        font-family: 'Merriweather-normal';
+
+        }
+
+        a {
+            text-decoration: none;
+            background: $color__link_visited;
+            padding: 0.75rem 1.5rem;
+            font-family: 'Novecento-normal';
+            font-size: 0.9rem;
+            color: white;
+          
+        }
+
+
+    }
+
+}
+
+// Latest Entries Section
+.latest-entries {
+    margin-bottom: 50px;
+    h1 {
+        font-size: 2.4rem;
+        text-align: center;
+        font-family: 'Novecento-normal';
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+}
+.latest-entry-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+  
+}
+.latest-entry {
+    grid-column: 1fr;
+  
+    border: $border__solid;
+    position: relative;
+    
+    .latest-entry-thumbnail {
+      height: 240px;
+        position: relative;
+        overflow: hidden;
+        background: grey;
+    }
+    .latest-entry-meta {
+        display: flex;
+        flex-direction: column;
+        padding: .75em;
+        
+        justify-items: space-between;
+        h2 {
+            margin-bottom: 3.75rem;
+            font-size: 1.8rem;
+            font-family: 'Novecento-bold';
+        }
+            a {
+                text-decoration: none;
+                color: $color__link-visited;
+
+            }
+            a:hover {
+                color: black;
+            }
+        }
+            p {
+                font-size: .75em;
+                font-family: 'Merriweather-normal';
+                
+          
+    }
+    .latest-entry-button {
+        position: absolute;
+        bottom: 0.75rem;
+        left: 0.75rem;
+        text-decoration: none;
+        border: 1px solid black;
+        padding: 0.75rem 1.5rem;
+        font-family: 'Novecento-normal';
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        color: black;
+            }
+            .latest-entry-button:hover {
+                background-color: $color__link-visited;
+                color: white;
+            }
+    }
+

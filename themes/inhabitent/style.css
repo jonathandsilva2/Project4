@@ -724,13 +724,13 @@ header {
   color: white;
   font-size: 2.1rem;
   font-weight: bold;
-  padding: .75rem 1.5rem;
-  max-width: 70%;
+  padding: 1rem 1.5rem;
+  max-width: 75%;
   font-family: 'Novecento-bold';
   letter-spacing: 2px; }
 
 .entry-meta {
-  bottom: 3px;
+  bottom: 7px;
   right: 0px;
   position: absolute;
   background-color: #248A83;
@@ -740,12 +740,12 @@ header {
 
 .journal {
   display: grid;
-  grid-template-columns: 65% 25%;
+  grid-template-columns: 70% 30%;
   padding-top: 50px; }
 
 .journal-left {
   grid-column: 1/2;
-  width: 90%;
+  width: 100%;
   justify-self: right;
   padding-right: 60px; }
 
@@ -949,13 +949,133 @@ body {
       -ms-flex-pack: center;
           justify-content: center; }
 
+.product-blocks {
+  margin: 65px 0 65px 0; }
+
+.product-block-title {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 400;
+  font-family: 'Novecento-normal';
+  margin-bottom: 2rem; }
+
+.product-block {
+  display: grid;
+  text-align: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 25px; }
+  .product-block .product-block-item:hover {
+    border: 1px solid #d99054;
+    border-top-width: 5px; }
+  .product-block .product-block-item {
+    border: 1px solid #e1e1e1;
+    border-top-width: 5px;
+    grid-column: 1fr;
+    padding: 1.3rem 1.5rem; }
+    .product-block .product-block-item img {
+      height: 70px;
+      width: 70px; }
+    .product-block .product-block-item p {
+      margin-bottom: 1.5rem;
+      font-family: 'Merriweather-normal'; }
+    .product-block .product-block-item a {
+      text-decoration: none;
+      background: #248A83;
+      padding: 0.75rem 1.5rem;
+      font-family: 'Novecento-normal';
+      font-size: 0.9rem;
+      color: white; }
+
+.latest-entries {
+  margin-bottom: 50px; }
+  .latest-entries h1 {
+    font-size: 2.4rem;
+    text-align: center;
+    font-family: 'Novecento-normal';
+    letter-spacing: 2px;
+    text-transform: uppercase; }
+
+.latest-entry-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px; }
+
+.latest-entry {
+  grid-column: 1fr;
+  border: 1px solid #e1e1e1;
+  position: relative; }
+  .latest-entry .latest-entry-thumbnail {
+    height: 240px;
+    position: relative;
+    overflow: hidden;
+    background: grey; }
+  .latest-entry .latest-entry-meta {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: .75em;
+    justify-items: space-between; }
+    .latest-entry .latest-entry-meta h2 {
+      margin-bottom: 3.75rem;
+      font-size: 1.8rem;
+      font-family: 'Novecento-bold'; }
+    .latest-entry .latest-entry-meta a {
+      text-decoration: none;
+      color: #248A83; }
+    .latest-entry .latest-entry-meta a:hover {
+      color: black; }
+  .latest-entry p {
+    font-size: .75em;
+    font-family: 'Merriweather-normal'; }
+  .latest-entry .latest-entry-button {
+    position: absolute;
+    bottom: 0.75rem;
+    left: 0.75rem;
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 0.75rem 1.5rem;
+    font-family: 'Novecento-normal';
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: black; }
+  .latest-entry .latest-entry-button:hover {
+    background-color: #248A83;
+    color: white; }
+
 /*--------------------------------------------------------------
 # Embedded Fonts
 // --------------------------------------------------------------*/
+.shop-header {
+  text-align: center; }
+  .shop-header h1 {
+    font-family: 'Novecento-bold';
+    letter-spacing: 2px; }
+
+.product-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Novecento-normal';
+  font-size: 1.2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 30px;
+  border-bottom: 1px dashed #c8c8c8; }
+  .product-header a {
+    text-decoration: none;
+    margin: 0 1.5rem; }
+
 .products-container {
+  margin-top: 40px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 1.5rem; }
+  grid-gap: 1.5rem;
+  margin-bottom: 70px; }
 
 .product-square {
   grid-column: 1fr;
@@ -1030,6 +1150,6 @@ body {
     text-transform: uppercase;
     margin-right: 4px; }
 
-body {
+#content {
   margin: auto;
   width: 1120px; }

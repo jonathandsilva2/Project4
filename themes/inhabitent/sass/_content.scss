@@ -70,8 +70,8 @@
 	color: white;
 	font-size: 2.1rem;
 	font-weight: bold;
-	padding: .75rem 1.5rem;
-	max-width: 70%;
+	padding: 1rem 1.5rem;
+	max-width: 75%;
 	font-family: 'Novecento-bold';	
 	letter-spacing: 2px;
 }
@@ -79,7 +79,7 @@
 
 
 .entry-meta {
-	bottom: 3px;
+	bottom: 7px;
 	right: 0px;
 	position: absolute;
 	background-color: #248A83;
@@ -90,13 +90,13 @@
 
 .journal {
 	display: grid;
-	grid-template-columns: 65% 25%;
+	grid-template-columns:70% 30%;
 	padding-top: 50px;
 }
 
 .journal-left {
 	grid-column: 1/2;
-	width: 90%;
+	width: 100%;
 	justify-self: right;
 	padding-right: 60px;
 }
